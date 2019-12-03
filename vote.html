@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- MADE BY: Dominik Ziolkowski, Radulovich Sarah, Changjae Lee(Thomas) -->
+<html lang="en" dir="ltr">
+    <head>
+        <link rel = stylesheet type = text/css href = images/styles.css>
+        <meta charset="utf-8">
+        <title>Vote For Elections</title>
+    </head>
+
+    <body>
+    <header align = center>
+        <div class="HeaderBorder">
+            <table align = center cellspacing = 5 cellpadding = 5>
+                <tr>
+                    <h1 id = TitleHead><img src="images/mapleLeaf.png" alt="Maple Leaf">Welcome to the Canadian Elections<img src="images/mapleLeaf.png" alt="Maple Leaf"></h1>
+                    <hr size = 3 noshade = true color = white width = 650>
+                </tr>
+                <tr>
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <a href="instructions.html">Instructions</a>
+                        <a href="aboutus.html">F.A.Q</a>
+                        <a href="vote.html">Vote Now</a>
+                    </nav>
+                </tr>
+                <hr size = 3 noshade = true color = white width = 650>
+            </table>
+        </div>
+    </header>
+
+        <section align = center>
+            <article>
+                <div class="boxAroundInfo">
+                <table>
+                    <tr>
+                        <h1 class = BorderedTableHeading>Online Polling Station</h1>
+                        <hr size = 2 noshade = true color = red width = 450>
+                    </tr>
+                    <tr>
+                        <form id="electionForm" action = results.html method="get">
+                            <input type="text" name="name" placeholder="Enter your name" required>
+                            <br>
+                            <input type="text" name="address" placeholder="Enter your Address" required>
+                            <br>
+                            <input type="text" name="postalcode" placeholder="Enter your Postal Code" required>
+                            <br>
+                            <p align = center>-Please Enter Choice for Political Party-</p>
+                            <input type="radio" name="politicalParty" value="liberal" required> Liberal
+                            <input type="radio" name="politicalParty" value="Conservative" required> Conservative
+                            <input type="radio" name="politicalParty" value="Green" required> Green
+                            <input type="radio" name="politicalParty" value="NDP" required> NDP
+                            <br>
+                            <hr size = 2 noshade = true color = red width = 450>
+                            <p align = center>-Please Enter choice for Prime Minister-</p>
+                            <input type="radio" name="primeMinister" value="justinTrudeau" required> Justin Trudeau
+                            <input type="radio" name="primeMinister" value="AndrewScheer" required> Andrew Scheer
+                            <input type="radio" name="primeMinister" value="ElizabethMay" required> Elizabeth May
+                            <input type="radio" name="primeMinister" value="JagmeetSingh" required> Jagmeet Singh
+                            <br><br>
+                            <p>Please leave us feedback on how we could improve your election voting process</p>
+                            <textarea name="feedback" rows="8" cols="80" form =electionForm></textarea>
+                            <br>
+                            <input type="submit" id="submit" value="SUBMIT">
+                        </form>
+                    </tr>
+                </table>
+               </div>
+            </article>
+        </section>
+
+    </body>
+    <footer>
+        Copyright © 2019 Assignment 3/4 - Election Site
+    </footer>
+</html>
