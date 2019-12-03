@@ -1,0 +1,176 @@
+@font-face {
+    font-family: angelika;
+    src: url("../images/Angelika.otf");
+}
+
+@font-face {
+        font-family: winchester;
+        src: url("../images/winchester.ttf");
+}
+
+@font-face {
+            font-family: bigSmile;
+            src: url("../images/bigsmile.ttf");
+}
+@font-face {
+            font-family: abel;
+            src: url("../images/abel.ttf");
+}
+
+header{
+    text-align: center;
+    color: white;
+}
+
+header .HeaderBorder{
+    background-image: url("../images/thingtop.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 45px;
+    width: 1050px;
+}
+
+header img{
+    height: 65px;
+    width: 85px;
+}
+
+header #TitleHead{
+
+    font-family: bigSmile;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 550;
+}
+
+header nav{
+    text-decoration: none;
+}
+
+header a{
+        display: inline-block;
+        text-align: center;
+        text-decoration:none;
+        background-color: white;
+        border-radius: 45px;
+        font-size:20px;
+        font-weight: bold;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 135px;
+        color:red;
+        margin-top:3px;
+        margin-bottom: 3px;
+}
+
+header a:hover{
+    background-color: rgba(255,204,204, 1);
+    color: black;
+}
+
+header a:active{
+    background-color: white;
+    color: red;
+}
+
+body{
+        font-family: abel;
+        font-size: 25px;
+        background-image: url("../images/backgroundCanada.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+}
+
+#votenowButton{
+    border: 2px solid red;
+    background-color: red;
+    text-decoration: none;
+    font-size: 45px;
+    color: white;
+    font-style: italic;
+    padding-left:20px;
+    padding-right:20px;
+
+}
+#votenowButton:hover{
+    color: black;
+    background-color: white;
+
+}
+
+#votenowButton:active{
+    color: red;
+
+}
+
+section #myPoliticalPromises{
+    table-layout: fixed;
+}
+
+section .boxAroundInfo{
+    padding-right: 20px;
+    padding-left: 20px;
+    display:inline-block;
+    border: 3px solid white;
+    width: 1050px;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 35px;
+}
+
+section .BorderedTableContent{
+    text-align: left;
+    list-style-type: none;
+}
+
+section .BorderedTableHeading{
+    text-align: center;
+    font-family: angelika;
+    font-style: bold;
+    font-size: 35px;
+}
+
+.partyTitle{
+    text-decoration: underline;
+}
+
+.logoImage{
+    width:85px;
+    height:85px;
+}
+
+#submit{
+    font-size: 25px;
+    background-color: red;
+    color: white;
+    border-radius: 45px;
+    width:200px;
+    border: 3px solid red;
+}
+
+#submit:hover
+{
+    background-color: white;
+    color: black;
+}
+
+#submit:active
+{
+    background-color: white;
+    color: red;
+}
+
+footer{
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    height: 20px;
+    text-align: center;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+}
