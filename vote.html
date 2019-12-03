@@ -8,7 +8,7 @@
     </head>
 
     <body>
-    <header align = center>
+        <header align = center>
         <div class="HeaderBorder">
             <table align = center cellspacing = 5 cellpadding = 5>
                 <tr>
@@ -23,50 +23,144 @@
                         <a href="vote.html">Vote Now</a>
                     </nav>
                 </tr>
-                <hr size = 3 noshade = true color = white width = 650>
             </table>
         </div>
-    </header>
+        </header>
 
         <section align = center>
             <article>
                 <div class="boxAroundInfo">
                 <table>
                     <tr>
-                        <h1 class = BorderedTableHeading>Online Polling Station</h1>
+                        <h1 class = BorderedTableHeading>Are you eligible to Vote?</h1>
                         <hr size = 2 noshade = true color = red width = 450>
                     </tr>
                     <tr>
-                        <form id="electionForm" action = results.html method="get">
-                            <input type="text" name="name" placeholder="Enter your name" required>
-                            <br>
-                            <input type="text" name="address" placeholder="Enter your Address" required>
-                            <br>
-                            <input type="text" name="postalcode" placeholder="Enter your Postal Code" required>
-                            <br>
-                            <p align = center>-Please Enter Choice for Political Party-</p>
-                            <input type="radio" name="politicalParty" value="liberal" required> Liberal
-                            <input type="radio" name="politicalParty" value="Conservative" required> Conservative
-                            <input type="radio" name="politicalParty" value="Green" required> Green
-                            <input type="radio" name="politicalParty" value="NDP" required> NDP
-                            <br>
-                            <hr size = 2 noshade = true color = red width = 450>
-                            <p align = center>-Please Enter choice for Prime Minister-</p>
-                            <input type="radio" name="primeMinister" value="justinTrudeau" required> Justin Trudeau
-                            <input type="radio" name="primeMinister" value="AndrewScheer" required> Andrew Scheer
-                            <input type="radio" name="primeMinister" value="ElizabethMay" required> Elizabeth May
-                            <input type="radio" name="primeMinister" value="JagmeetSingh" required> Jagmeet Singh
-                            <br><br>
-                            <p>Please leave us feedback on how we could improve your election voting process</p>
-                            <textarea name="feedback" rows="8" cols="80" form =electionForm></textarea>
-                            <br>
-                            <input type="submit" id="submit" value="SUBMIT">
-                        </form>
+                        <p class = BorderedTableContent>
+                            To register and be able to vote in the federal Canadian Elections, 
+                            you must be a Canadian Citizen aged 18 or older, 
+                            You must be able to provide acceptable proof of identity, which includes a address. 
+                            Although this year is different, 
+                            Citizens are asked to checkmark a box proving they are over the age of 18 and documentation can be provided at a different date.
+                        </p>
                     </tr>
+
                 </table>
                </div>
             </article>
         </section>
+
+        <section align = center>
+                <article>
+                    <div class="boxAroundInfo">
+                    <table>
+                        <tr>
+                            <h1 class = BorderedTableHeading>Voting Form</h1>
+                            <hr size = 2 noshade = true color = red width = 450>
+                        </tr>
+                        <tr>
+                                Please fill out all of the required fields. When you have finished, click the "Submit Ballot" button at the bottom of the page.
+                                <br><br>
+                                <!-- This form uses a post request, we don't want voting information being available in the URL -->
+                                <form method="post" action="results.html">
+                                    * Please enter your name. <br>
+                                    <input name=name type=text placeholder="Name" required>
+        
+                                    <br><br>
+                                    
+                                    * Please enter your home address. <br>
+                                    <input name=address type=text placeholder="Home Address" required>
+        
+                                    <br><br>
+        
+                                    * Please enter your city. <br>
+                                    <input name=city type=text placeholder="City" required>
+        
+                                    <br><br>
+        
+                                    * Please select your province or territory. <br>
+        
+                                    <select name=province size=4 required>
+                                        <option>British Colombia</option>
+                                        <option>Alberta</option>
+                                        <option>Saskatchewan</option>
+                                        <option>Manitoba</option>
+                                        <option>Ontario</option>
+                                        <option>Quebec</option>
+                                        <option>Newfoundland and Labrador</option>
+                                        <option>New Brunswick</option>
+                                        <option>Nova Scotia</option>
+                                        <option>PEI</option>
+                                        <option>Yukon</option>
+                                        <option>Northwest Territories</option>
+                                        <option>Nunavut</option>
+                                    </select>
+        
+                                    <br><br>
+        
+                                    Please select your gender. <br>
+                                    <input name=gender type=radio>Male
+                                    <input name=gender type=radio>Female
+                                    <input name=gender type=radio checked>Other
+        
+                                    <br><br>
+        
+                                    * Confirm that you are at least 18 years of age and are eligible to vote in Canada.
+                                    <input name=eligibility type=checkbox required>
+
+                                    <br><br>
+
+                                    * Please select the party you wish to vote for. If you wish to write in a candidate, please do so below the options.
+                                    <br>
+                                    <!-- A table to show images and party selection -->
+                                    <table align=center cellpadding=20>
+                                        <tr>
+                                            <td>
+                                                <img class = logoImage src="images/conservative.png" alt="Conservative Logo"> 
+                                                <br>
+                                                <input name=party value=con type="radio" required>Conservative Party of Canada <br>
+                                            </td>
+                                            <td>
+                                                <img class = logoImage src="images/liberal.png" alt="Liberal Logo">
+                                                <br>
+                                                <input name=party value=lib type="radio">Liberal Party of Canada <br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img class = logoImage src="images/green.png" alt="Green Party Logo">
+                                                <br>
+                                                <input name=party value=green type="radio">Green Party of Canada <br>
+                                            </td>
+                                            <td>
+                                                <img class = logoImage src="images/ndp.png" alt="NDP Logo">
+                                                <br>
+                                                <input name=party value=ndp type="radio">New Democratic Party <br>    
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input name=party value=novote type="radio">Refused Ballot <br>
+                                            </td>
+                                            <td>
+                                                <input name=party value=other_radio type="radio">Other
+                                                <input name=other_explanation type="text" placeholder="Other Representative">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <p>Please leave us feedback on how we could improve your election voting process</p>
+                                    <textarea name="feedback" rows="8" cols="80" form =electionForm placeholder="Your feedback..."></textarea>
+                                    <br>
+
+                                    <input id=submit name=submit type=submit value="Submit Ballot">
+                                    
+                                    <br><br>
+                                </form>
+                            </tr>
+                    </table>
+                   </div>
+                </article>
+            </section>
 
     </body>
     <footer>

@@ -143,6 +143,15 @@ section .BorderedTableHeading{
     height:85px;
 }
 
+#ballot_img {
+    width:150px;
+    height:150px;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
 #submit{
     font-size: 25px;
     background-color: red;
